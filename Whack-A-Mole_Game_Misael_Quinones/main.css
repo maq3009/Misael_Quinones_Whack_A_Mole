@@ -1,0 +1,65 @@
+*{
+    margin: 0px;
+    padding: 0;
+}
+html, body{
+    height: 100%;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: green;
+    color: white;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    display:  flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.score{
+    font-size: 4em;
+    margin-bottom: .5emm;
+    margin:40px;
+}
+#time-left{
+    font-size: 1em;
+    
+}
+.board{
+    padding: 60px;
+    padding-bottom: 15px;
+    height: 600px;
+    width: 600px;
+    border: 15px solid rgb(8, 8, 8);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 80px;
+}
+.hole{
+    background-color: rgb(37, 37, 37);
+    border-radius: 50%;
+    box-shadow: 1in;
+    /* box-shadow: inset 0 10px 0 7px rgb(31, 30, 30),
+                inset 0 20px 20px 15px rgb(31, 30, 30, .5),
+                0 0 5px rgb(31, 30, 30 .5) */
+}
+
+.mole{
+    background-image: url("images/mole.png");
+}
+
+ .cursor{
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    top: -50px;
+    left: 100px;
+    background-color: none;
+    background-image: url("images/hammer.png");
+    background-size: 100%, 100%;
+    transform: translate(20% , 20%);
+}
+.cursor.active{
+    transform: translate() rotate(20% , 20%)
+} 
